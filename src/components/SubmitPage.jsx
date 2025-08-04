@@ -62,9 +62,12 @@ const filteredQuestions =
             ))}
           </div>
 
-          <p className="text-3xl text-right whitespace-nowrap">
+          <div className="sm:text-right w-full sm:w-auto">
+          <p className="text-3xl whitespace-wrap">
             You scored a {percentage}%
           </p>
+        </div>
+
         </div>
         <div className="flex justify-center mt-6">
         <button
