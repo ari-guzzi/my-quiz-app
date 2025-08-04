@@ -18,13 +18,15 @@ if (query.length > 0) {
 };
   return (
     <>
-      <input 
-        type="text" 
-        placeholder="Search here" 
-        onChange={handleChange} 
-        value={searchInput}
-        className="w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" 
-      />
+      <div className="flex justify-center my-1">
+  <input 
+    type="text" 
+    placeholder="Search Here" 
+    onChange={handleChange} 
+    value={searchInput}
+    className="w-[70%] p-3 border border-gray-300 rounded-3xl focus:outline-none focus:ring-2 focus:ring-UNBlue" 
+  />
+</div>
       <div>
       </div>
     </>

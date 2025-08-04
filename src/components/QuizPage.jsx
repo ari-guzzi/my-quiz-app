@@ -27,13 +27,21 @@ function QuizPage({ quiz, selectedTypes, answers, setAnswers, setSubmittedQuiz }
     return <p className="text-center mt-4">No questions match the selected filter.</p>;
   }
     return (
-        <div className = "border p-4 shadow-md bg-white">
-            <h2 className = "text-center">{quiz.name}</h2>
-        {filteredQuestions.map((q, index) => (
-            <button className ="cursor-pointer bg-yellow-400 space-x-2 m-6" key={index} onClick={() => handleClick(index)}>Question {index+1}</button>
-          ))}
+        <div className = "border p-4 shadow-md bg-white rounded-lg">
+            <h2 className = "font-schoolbell text-center text-3xl">{quiz.name} Quiz</h2>
+            <div className="flex flex-wrap justify-center gap-4">
+              {filteredQuestions.map((q, index) => (
+                <button
+                  key={index}
+                  onClick={() => handleClick(index)}
+                  className="font-PlusJakartaSans rounded-full cursor-pointer bg-Isabelline bg-opacity-50 border p-2 border-UNBlue m-6 hover:bg-UNBlue hover:border-Isabelline"
+                >
+                  Question {index + 1}
+                </button>
+              ))}
+            </div>
          <div className="mt-4">
-        <p className = "text-center">{filteredQuestions[currentIndex].question}</p>
+        <p className = "text-center font-PlusJakartaSans text-xl">{filteredQuestions[currentIndex].question}</p>
         <div>
 
             <p>Answer: </p>
@@ -46,7 +54,7 @@ function QuizPage({ quiz, selectedTypes, answers, setAnswers, setSubmittedQuiz }
         </div>
       </div>
       <div className="grid justify-items-center">
-        <button className="m-6 p-2 border border-red-500 cursor-pointer hover:bg-red-500"   onClick={() => setSubmittedQuiz({ quiz, answers })}
+        <button className="font-PlusJakartaSans m-6 p-2 border bg-Isabelline border-PinkLavender cursor-pointer px-10 rounded-full hover:bg-Bole hover:text-white"   onClick={() => setSubmittedQuiz({ quiz, answers })}
 >Submit Finished Quiz</button>
       </div>
     </div>
