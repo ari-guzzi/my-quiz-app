@@ -18,7 +18,7 @@ function QuizTable({ quizzes, setActiveQuiz, setAnswers, selectedTypes }) {
             {category}
           </div>
 
-          <div className="bg-Isabelline p-3 border border-t-0 border-Bole">
+          <div className="bg-Isabelline p-3  border-t-0 border-Bole">
             <div className="flex overflow-x-auto gap-4">
               {groupedQuizzes[category].map((quiz) => (
                 <div
